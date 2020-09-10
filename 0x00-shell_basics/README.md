@@ -1,0 +1,1 @@
+This directory contains the answer to task: 0. Where am I?
