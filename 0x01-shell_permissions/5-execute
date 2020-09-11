@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chmod 500 hello
+sudo chmod 700 hello
