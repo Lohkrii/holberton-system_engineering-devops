@@ -1,0 +1,1 @@
+This folder contains my script answer files for the project 0x01-shell_permissions.
