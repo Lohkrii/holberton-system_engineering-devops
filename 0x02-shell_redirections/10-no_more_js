@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -vr ./*.js \n 
+find -type f ./ | ./*.js
