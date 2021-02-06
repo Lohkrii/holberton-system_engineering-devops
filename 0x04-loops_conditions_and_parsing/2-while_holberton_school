@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script prints "Holberton school"
+count=0
+while (( count < 10 )); do
+	echo "Holberton School"
+	(( count ++ ))
+done
