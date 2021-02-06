@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script file prints "Holberton School" 10 times in 10 lines.
+for (( idx=0; idx<10; idx++ ));
+do
+	echo "Holberton School"
+done
