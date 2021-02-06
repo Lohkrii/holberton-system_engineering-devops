@@ -3,6 +3,6 @@
 LS="$(ls .)"
 for idx in $LS;
 do
-	g="$(find "$idx" | cut -d "-" -f2)"
+	cidx="$(find "$idx" | cut -d "-" -f2)"
 	echo "$cidx"
 done
