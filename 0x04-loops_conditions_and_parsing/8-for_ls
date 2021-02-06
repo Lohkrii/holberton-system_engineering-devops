@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script prints the content of the current directory in a specific format.
+LS="$(ls .)"
+for idx in $LS;
+do
+	g="$(find "$idx" | cut -d "-" -f2)"
+	echo "$cidx"
+done
