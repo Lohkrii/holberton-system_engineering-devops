@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This Script uses the until loop to print "Holberton School" 10 times.
+idx=0
+until (( idx>9 ));
+do
+	echo "Holberton School"
+	(( idx++ ))
+done
