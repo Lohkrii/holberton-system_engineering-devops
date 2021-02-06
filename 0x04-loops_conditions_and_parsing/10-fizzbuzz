@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script prints number from 1 to 100, and prints FIZZBUZZ at multiples of 3 and 5.
+for (( idx=1; idx<=100; idx++ ));
+do
+	if (( idx % 15 == 0 ))
+	then
+		echo "FizzBuzz"
+	elif (( idx % 5 == 0 ))
+	then
+		echo "Buzz"
+	elif (( idx % 3 == 0 ))
+	then
+		echo "Fizz"
+	else
+		echo "$idx"
+	fi
+done
