@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script displays number from 1 to 20 and prints extra strings on the 4, 9th and 17.
+idx=1
+while [ $idx -le 20 ]
+do
+	case $idx in
+		5)
+		echo "bad luck from China"
+		;;
+		10)
+		echo "bad luck from Japan"
+		;;
+		18)
+		echo "bad luck from Italy"
+		;;
+	esac
+		echo "$idx"
+	(( idx++ ))
+done
