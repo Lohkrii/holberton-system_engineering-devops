@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script prints "Holberton School" and prints bad lock and good lock on the 4th and 8th respectively.
+idx=0
+while [ $idx -lt 10 ];
+do
+	if [ $idx -eq 3 ]
+	then
+		echo "bad luck"
+	elif [ $idx -eq 7 ]
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	(( idx++ ))
+done
