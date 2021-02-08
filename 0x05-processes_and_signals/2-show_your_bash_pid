@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script prints all of the PIDs of my bash processes.
+# shellcheck disable=SC2009
+ps -u
