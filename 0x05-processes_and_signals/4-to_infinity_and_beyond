@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This scripts creates an infinite loop that prints "To infinity and beyond"
+for (( idx=0, count=1; idx<count; idx++, count++ ));
+do
+	echo "To infinity and beyond"
+done
