@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # This script prints a list of all current processes in a specified format. (User Oritented format)
-ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm
+ps -u
