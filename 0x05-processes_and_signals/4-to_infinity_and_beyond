@@ -3,4 +3,5 @@
 for (( idx=0, count=1; idx<count; idx++, count++ ));
 do
 	echo "To infinity and beyond"
+	sleep 2
 done
