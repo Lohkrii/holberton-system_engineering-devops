@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script writes indefinetly to a file. Should pause for 2 seconds in between prints.
+for ((;;))
+do
+	echo "I am alive!" >> /tmp/my_process
+	sleep 2
+done
