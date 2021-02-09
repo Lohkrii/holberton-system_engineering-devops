@@ -3,17 +3,25 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+/**
+ * infinite_while - Infinite loop
+ * Return: 0 for success. NOT! Its and infinite loop.
+ */
 
 int infinite_while(void)
 {
-    while (1)
-    {
-        sleep(1);
-    }
-    return (0);
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
 }
 
-int main()
+/**
+ * main - Makes 5 Zombie processes.
+ * Return: 0 for success. NOT! Its and infinite loop.
+ */
+int main(void)
 {
 	pid_t child;
 	int idx;
