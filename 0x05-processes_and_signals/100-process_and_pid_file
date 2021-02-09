@@ -12,5 +12,4 @@ trap 'sudo rm $FILE; exit' SIGQUIT
 for ((;;))
 do
 	echo "To infinity and beyond"
-	sleep 2
 done
