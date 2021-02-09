@@ -10,5 +10,6 @@ do
 	USER_ID="${line[2]}"
 	PASSWORD="${line[1]}"
 	USER_ID_INFO="${line[4]}"
+
 	echo "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOME_DIRECTORY and rides $COMMAND_OR_SHELL. $USER_ID's place is protected by the passcode $PASSWORD, more info about the user here: $USER_ID_INFO"
 done < $FILE
