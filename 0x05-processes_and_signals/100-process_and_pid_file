@@ -8,7 +8,7 @@ new_file=/var/run/holbertonscript.pid
 echo $$ > $FILE
 trap 'echo I hate the kill command; sudo rm $FILE; exit' SIGTERM
 trap "echo Y U no love me?!" SIGINT
-trap 'sudo rm $FILE; exit' SIGQUIT
+trap 'sudo rm /var/run/holbertonscript.pid; exit' SIGQUIT
 for ((;;))
 do
 	echo "To infinity and beyond"
