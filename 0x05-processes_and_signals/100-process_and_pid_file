@@ -5,13 +5,13 @@
 # -Displays "Y U no love me?!" when recieving SIGINT signal
 # -Deletes the file and terminates itself when receiving a SIGQUIT or SIGTERM signal
 touch /var/run/holbertonscript.pid
-pgrep 100-process_and_pid_file >> /var/run/holbertonscript.pid
+pgrep 100-process_and_pid_file > /var/run/holbertonscript.pid
 if trap=SIGTERM
 then
-	echo I hate the kill command | pkill -f 100-process_and_pid_file -9
+	echo I hate the kill command | rm /var/run/holbertonscript.pid | pkill -f 100-process_and_pid_file -9
 elif trap=SIGINT
 then
-	echo Y U no love me?! | pkill -f 100-process_and_pid_file -9
+	echo Y U no love me?! | rm /var/run/holbertonscript.pid | pkill -f 100-process_and_pid_file -9
 fi
 trap "rm /var/run/holbertonscript.pid | pkill -f 100-process_and_pid_file -9" SIGQUIT SIGTERM SIGINT
 for ((;;))
