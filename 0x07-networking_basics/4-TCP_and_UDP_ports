@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This bash script prints to the standard output the listening ports
+# of the current network. (And its PID's)
+netstat -lp
