@@ -1,0 +1,4 @@
+Host ubuntu@35.237.73.35
+	HostName ubuntu@35.237.73.35
+	PasswordAuthentification no
+	IdentityFile holberton
