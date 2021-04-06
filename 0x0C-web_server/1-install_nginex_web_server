@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script Updates a server and installs Nginx
+# Also creates an html script to run in the web server
+sudo apt-get update -y
+sudo apt-get install nginx -y
+sudo service nginx start
+echo "Holberton School" | sudo tee /var/www/html/index.html
+sudo service nginx restart
+#sudo ufw allow 'Nginx HTTP' # Allows nginx through firewall
+#sudo mkdir -p /var/www/hlb.com/html # Creating new page
+#sudo chmod -R 755 /var/www # Modifying permissions uMask
+#sudo chmod -R 777 /var/www/hlb.com
+#touch /var/www/hlb.com/html/index.html
+#echo "Holberton School" | sudo tee /var/www/hlb.com/html/index.html
+#rm -f /etc/nginx/sites-enabled/default
+#touch /etc/nginx/sites-available/hlb.com # Making new site
+#echo "server {\n\tlisten 80 default_server;\n\tlisten [::]:80 default_server;\n\n\troot /var/www/hlb.com/html;\n\tindex index.html index.htm index.nginx-debian.html;\n\n\tserver_name hlb.com www.hlb.com;\n}" | sudo tee /etc/nginx/sites-available/hlb.com
+#sudo ln -s /etc/nginx/sites-available/hlb.com.com /etc/nginx/sites-enabled/
+#sudo ngix -t
+#sudo service nginx restart
