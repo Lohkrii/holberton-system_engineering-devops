@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Runs the apache webserver
+sudo service apache2 start
