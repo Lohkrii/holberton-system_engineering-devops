@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# This script initializes a new web server by installing
+# Nginx and setting a custom config file as well as modify
+# the http header response. We will be using the previous
+# web-server setup bash scripts.
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo service nginx start
+echo "Holberton School" | sudo tee /var/www/html/index.html
+string="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sudo sed -i "35i $string" /etc/nginx/sites-available/default
+sudo sed -i "36i \\\tadd_header X-Served-By \$hostname;" /etc/nginx/sites-available/default
+sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+error_str="\\\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}"
+sudo sed -i "37i $error_str" /etc/nginx/sites-available/default
+sudo service nginx restart
