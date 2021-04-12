@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-
 # This script initializes a new web server by installing
 # Nginx and setting a custom config file as well as modify
 # the http header response. We will be using the previous
 # web-server setup bash scripts.
-
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo service nginx start
