@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Installs and configures HAproxy on my load balancing server.
+# Distributes requests useing a roundrobin algorithm.
+# HApropxy version must be 1.5 or above.
+
+SETUP="frontend front_default\n  bind \*:80\n\t\tmode http\n\t\t\
+default_backend nginx_pool\n\nbackend nginx_pool\n\t\tbalance \
+roundrobin\n\tserver 2336-web-01 35.231.192.145:80 check\n\t\
+server 2336-web-02 35.229.116.76:80 check"
+
+sudo apt-get -y purge haproxy
+sudo apt-get -y update && apt-get -y install haproxy
+
+sudo sed -i '8i\ENABLED=1' /etc/default/haproxy
+sudo sed -i "$ a\\$SETUP" /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
